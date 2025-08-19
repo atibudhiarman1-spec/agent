@@ -1,0 +1,21 @@
+charts:
+  salary_trend: chart_1
+  top_titles_salary: chart_2
+
+insights: text_insights
+
+requirements:
+  # 1) Average annual salary trend over time
+  salary_trend:
+    type: line
+    x: job_posted_date
+    y: salary_year_avg
+    agg: mean
+
+  # 3) Top job titles by average annual salary
+  top_titles_salary:
+    type: bar
+    x: job_title_short
+    y: salary_year_avg
+    agg: mean
+    top_k: 10
